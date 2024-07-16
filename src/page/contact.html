@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <link rel="stylesheet" href="../styles/contact.css" />
+  <link rel="stylesheet" href="../js/index.js" />
+  <script src="../js/contact.js"></script>
+  <title>Liên hệ - Góp ý</title>
+</head>
+
+<body>
+  <header class="container-header">
+    <div class="header-logo">
+      <img src="../images/Nav/Logo-1.png" alt="logo" />
+    </div>
+
+    <nav class="header-nav">
+      <ul>
+        <li>
+          <a href="./home" class="header-nav-link" onclick="activeNavLinkHeader(this)">Trang chủ</a>
+        </li>
+        <li>
+          <a class="header-nav-link" onclick="activeNavLinkHeader(this)" href="./visit">Về ĐHQG-HCM</a>
+        </li>
+        <li>
+          <a class="header-nav-link header-active" onclick="activeNavLinkHeader(this)" href="./3dMap">Bản đồ 3D</a>
+        </li>
+        <li>
+          <a class="header-nav-link" onclick="activeNavLinkHeader(this)" href="./contact">Liên hệ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="avarta" class="avarta">
+      <img src="../images/Nav/Fixed Avatar.jpg" alt="avarta" />
+      <img title="LogOut" id="logOut" src="../images/Nav/Logout Icon.png" alt="logout" />
+    </div>
+
+    <a id="btnLogIn" href="./log-in" class="btn-login">Đăng nhập</a>
+  </header>
+  <section id="section1">
+    <p>Liên hệ - Góp ý</p>
+  </section>
+  <section id="section2">
+    <form id="left-side">
+      <label>Biểu mẫu góp ý</label><br />
+      <label for="fname">Họ và tên <span class="asterisk">*</span></label><br />
+      <input type="text" id="fname" name="fname" required /><br />
+      <label for="femail">Email <span class="asterisk">*</span></label><br />
+      <input type="text" id="femail" name="femail" /><br />
+      <label for="ftitle">Tiêu đề <span class="asterisk">*</span></label><br />
+      <input type="text" id="ftitle" name="ftitle" required /><br />
+      <label for="fcontent">Nội dung bạn muốn nhắn gửi <span class="asterisk">*</span></label><br />
+      <textarea id="fcontent" required> </textarea><br />
+      <input type="submit" id="fsubmit" value="Gửi" />
+    </form>
+    <aside id="right-side">
+      <p>Thông tin liên hệ</p>
+      <br />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5546066998824!2d106.80072031474942!3d10.870084560144173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527bc7db1f1b1%3A0x7e3a1f79f8e7eb61!2sVietnam%20National%20University%20-%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1670597643000!5m2!1sen!2s"
+        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div>
+        <img src="../images/vector.png" alt="location vector" />
+        <span>Khu phố 6, phường Linh Trung, Thủ Đức, TP.HCM</span>
+      </div>
+      <hr />
+    </aside>
+  </section>
+
+    <footer class="container-footer">
+      <div class="content-footer">
+        <a href="./home" class="footer-logo">
+          <img src="../images/Nav/Logo-1.png" alt="logo" />
+        </a>
+        <nav class="footer-nav">
+          <h2>Liên kết</h2>
+          <ul>
+            <li><a href="./home">Trang chủ</a></li>
+            <li><a href="./about">Về ĐHQG-HCM</a></li>
+            <li><a href="./admissions">Bản đồ 3D</a></li>
+            <li><a href="./contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav">
+          <h2>Thông tin liên hệ</h2>
+          <ul>
+            <li>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>Điện thoại: 028.37242181</span>
+            </li>
+            <li>
+              <i class="fa fa-fax" aria-hidden="true"></i>
+              <span>Fax: 028.37242182</span>
+            </li>
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Khu phố 6, phường Linh Trung, <br />
+                Thủ Đức, TP.HCM
+              </span>
+            </li>
+          </ul>
+        </nav>
+    
+        <nav class="footer-nav">
+          <h2>Theo dõi chúng tôi</h2>
+          <div class="socials">
+            <a href="https://www.facebook.com/vnuhcm" target="_blank">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/vnuhcm" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/vnuhcm" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2024 Bản quyền thuộc về Đại học Quốc gia Thành phố Hồ Chí Minh</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <script>
+      const avatar = document.getElementById("avarta");
+      const btnLogIn = document.getElementById("btnLogIn");
+      const logOut = document.getElementById("logOut");
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (token) {
+        avatar.style.display = "block";
+        btnLogIn.style.display = "none";
+      } else {
+        avatar.style.display = "none";
+        btnLogIn.style.display = "block";
+      }
+      var notyf = new Notyf({
+        duration: 2000,
+        position: {
+          x: "right",
+          y: "bottom",
+        },
+        dismissible: true,
+      });
+      // prevent form submit
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const postFeedback =
+          "https://ie-402-dinh-doc-954kxw01e-duyeentm.vercel.app/api/v1/feedback/post";
+
+        fetch(postFeedback, {
+          method: "POST",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullname: fname.value,
+            email: femail.value,
+            title: ftitle.value,
+            content: fcontent.value,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.errorCode == 200) {
+              notyf.success("Gửi thành công");
+              form.reset();
+            } else {
+              notyf.error("Lỗi hệ thống, yêu cầu gửi của bạn không thành công");
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    </script>
+</body>
+
+</html>

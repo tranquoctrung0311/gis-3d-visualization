@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/visit.css" />
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+  <title>Về ĐHQG-HCM</title>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+  <div id="visit-container">
+    <!-- Header -->
+    <header class="container-header">
+      <div class="header-logo">
+        <img src="../images/Nav/Logo-1.png" alt="logo" />
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="./home" class="header-nav-link" onclick="activeNavLinkHeader(this)">Trang chủ</a>
+          </li>
+          <li>
+            <a class="header-nav-link header-active" onclick="activeNavLinkHeader(this)" href="./visit">Về ĐHQG-HCM</a>
+          </li>
+          <li>
+            <a class="header-nav-lin" onclick="activeNavLinkHeader(this)" href="./3dMap">Bản đồ 3D</a>
+          </li>
+          <li>
+            <a class="header-nav-link" onclick="activeNavLinkHeader(this)" href="./contact">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="avarta" class="avarta">
+        <img src="../images/Nav/Fixed Avatar.jpg" alt="avarta" />
+        <img title="LogOut" id="logOut" src="../images/Nav/Logout Icon.png" alt="logout" />
+      </div>
+
+      <a id="btnLogIn" href="./log-in" class="btn-login">Đăng nhập</a>
+    </header>
+
+    <div class="notification-container">
+      <div class="notification-img-container">
+        <img src="../images/Nav/Speaker icon.gif" alt="" />
+      </div>
+      <div class="notification-text-container">
+        <h4>THÔNG BÁO:</h4>
+        <marquee direction="left" height="45" width="100%" bgcolor="white">
+          <p>
+            Ban quản lý Đại học Quốc gia Thành phố Hồ Chí Minh thông báo tuyển sinh cho các chương trình đào tạo đại học
+            và sau đại học năm học 2024-2025. Thông tin chi tiết và hồ sơ đăng ký vui lòng truy cập website
+          </p>
+        </marquee>
+      </div>
+    </div>
+
+    <div class="visit-title">
+      <div class="title-banner">
+        <h3 class="title-text">ĐÀO TẠO</h3>
+      </div>
+    </div>
+
+    <div class="guide-container">
+      <table>
+        <tr>
+          <td>
+            <div class="col-left">
+              <div class="col-left-container-title">
+                <img src="../images/Visit/Clock.gif" alt="Clock" class="col-left-img" />
+                <span class="col-left-title">Giới thiệu</span>
+              </div>
+              <ul>
+                <li>
+                  Quy mô tốt nghiệp hệ đại học chính quy<br>
+                  Quy mô tốt nghiệp hệ đại học chính quy (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </li>
+                <li>
+                  Số lượng sinh viên kỹ sư/ cử nhân tài năng tốt nghiệp<br>
+                  Số lượng sinh viên kỹ sư/ cử nhân tài năng tốt nghiệp (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </li>
+                <li>
+                  Số lượng sinh viên tốt nghiệp các chương trình chất lượng cao<br>
+                  Số lượng sinh viên tốt nghiệp các chương trình chất lượng cao (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </li>
+              </ul>
+            </div>
+          </td>
+
+
+          <td>
+            <div data-aos="fade-left" data-aos-duration="1500" class="col-right img-modify-col1">
+              <img src="../images/Visit/DH.jpeg" alt="Clock" class="col-right-img" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div data-aos-duration="1000" data-aos="fade-right" class="img-col-left">
+              <img src="../images/Visit/SDH.jpg" alt="Clock" class="col-right-img" />
+            </div>
+          </td>
+          <td>
+            <div class="col-left col-modify">
+              <div class="col-left-container-title">
+                <span class="col-left-title">Sau đại học</span>
+              </div>
+              <div class="sub-row">
+                <p class="sub-row-text">
+                  <strong>Danh mục các chương trình liên kết có yếu tố nước ngoài tại ĐHQG-HCM</strong><br>
+                  Danh mục các chương trình liên kết có yếu tố nước ngoài tại ĐHQG-HCM (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </p>
+              </div>
+              <div class="sub-row">
+                <p class="sub-row-text">
+                  <strong>Quy mô tốt nghiệp sau đại học</strong><br>
+                  Quy mô tốt nghiệp sau đại học tại ĐHQG-HCM từ 2018-2022 (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </p>
+              </div>
+              <div class="sub-row">
+                <p class="sub-row-text">
+                  <strong>Danh mục các ngành đào tạo trình độ Tiến sĩ tại ĐHQG-HCM</strong><br>
+                  ĐHQG-HCM hiện có 98 chương trình/ngành đào tạo trình độ tiến sĩ (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </p>
+              </div>
+              <div class="sub-row">
+                <p class="sub-row-text">
+                  <strong>Danh mục các ngành đào tạo trình độ Thạc sĩ tại ĐHQG-HCM</strong><br>
+                  ĐHQG-HCM hiện có 141 chương trình/ngành đào tạo trình độ thạc sĩ (Báo cáo thường niên 2022)<br>
+                  <strong>31/10/2022</strong>
+                </p>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <td>
+            <div class="col-left">
+              <div class="col-left-container-title">
+                
+                <span class="col-left-title">Giới thiệu về mô hình giáo dục 4.0 trên nền tảng CDIO hiện đại</span>
+              </div>
+              <ul>
+                <li>
+                  CDIO được áp dụng tại ĐHQG-HCM trong giai đoạn 2010-2017 với 5 ngành đào tạo thí điểm vào năm 2010 và
+                  đã nhân rộng thành 62 ngành (30 ngành kỹ thuật, công nghệ kỹ thuật; 32 ngành đào tạo phi kỹ thuật) của
+                  29 khoa thuộc 5 trường đại học thành viên của ĐHQG-HCM.
+                </li>
+                <li>
+                  Sau 8 năm triển khai CDIO, ĐHQG-HCM đã đạt được những kết quả thiết thực trong việc áp dụng những
+                  phương pháp tiếp cận tiên tiến để phát triển chương trình đào tạo đáp ứng nhu cầu xã hội và chuẩn mực
+                  chất lượng quốc tế.
+                </li>
+                <li>
+                  Trước tác động của Cách mạng Công nghiệp lần thứ tư, giáo dục đại học cần thực hiện những bước đột phá
+                  mới trong hoạt động đào tạo, thay đổi mục tiêu và mô hình đào tạo truyền thống.
+                </li>
+                <li>
+                  ĐHQG-HCM luôn xác định vai trò, trách nhiệm tiên phong trong việc cải cách giáo dục Việt Nam, tiếp tục
+                  nghiên cứu, áp dụng các mô hình đào tạo mới, hiện đại của giáo dục thế giới.
+                </li>
+                <li>
+                  Đề án “Mô hình giáo dục 4.0 trên nền tảng áp dụng CDIO hiện đại tại ĐHQG-HCM giai đoạn 2018-2022”
+                  hướng đến mục tiêu vận dụng kết quả từ việc áp dụng mô hình CDIO nhằm cải tiến chất lượng đào tạo,
+                  cung cấp nguồn nhân lực chất lượng cao đáp ứng nhu cầu xã hội.
+                </li>
+              </ul>
+            </div>
+          </td>
+
+
+          <td>
+            <div data-aos="fade-left" data-aos-duration="1500" class="col-right">
+              <img src="../images/Visit/40.jpeg" alt="Clock" class="col-right-img" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ticket-price-container">
+      <h2 class="ticket-price-title">Thông tin khác</h2>
+      <div class="ticket-tab-container">
+        <div class="heritage-container tab-container">
+            <h3 class="ticket-title ticket-title-left">Tuyển sinh</h3>
+            <p class="ticket-line1">Tin tức/Sự kiện</p>
+            <p class="ticket-line2">Thi Đánh giá năng lực</p>
+            <p class="ticket-line3">Cổng thông tin tuyển sinh</p>
+        </div>
+        <div class="combo-container tab-container">
+            <h3 class="ticket-title ticket-title-center">CÁC ĐƠN VỊ THÀNH VIÊN</h3>
+            <p class="ticket-line1">Trường Đại học Bách Khoa</p>
+            <p class="ticket-line2">Trường Đại học Khoa học Tự nhiên</p>
+            <p class="ticket-line3">Trường Đại học KHXH và Nhân văn</p>
+            <p class="ticket-line4">Trường Đại học Quốc tế</p>
+            <p class="ticket-line5">Trường Đại học Công nghệ Thông tin</p>
+            <p class="ticket-line6">Trường Đại học Kinh tế - Luật</p>
+            <p class="ticket-line7">Trường Đại học An Giang</p>
+            <p class="ticket-line8">Viện Môi trường và Tài nguyên</p>
+            <p class="ticket-line9">Các đơn vị khác</p>
+        </div>
+        <div class="showroom-container tab-container">
+            <h3 class="ticket-title ticket-title-right">Thông tin chung về ĐHQG-HCM</h3>
+            <p class="ticket-line1">Tầm nhìn, sứ mạng & giá trị cốt lõi</p>
+            <p class="ticket-line2">Báo cáo thường niên</p>
+            <p class="ticket-line3">Nhận diện thương hiệu</p>
+        </div>
+    </div>
+    
+    </div>
+
+    <div class="map-container">
+      <div class="map-left">
+        <div class="visit-map" data-aos="fade-up-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5546066998824!2d106.80072031474942!3d10.870084560144173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527bc7db1f1b1%3A0x7e3a1f79f8e7eb61!2sVietnam%20National%20University%20-%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1670597643000!5m2!1sen!2s"
+            width="500" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="map-right">
+        <div class="map-content" data-aos="fade-up-left">
+          Đại học Quốc gia TP.HCM là một trong những hệ thống đại học lớn nhất tại Việt Nam, nằm tại khu đô thị Đại học
+          Quốc gia TP.HCM, phường Linh Trung, Quận Thủ Đức. Địa chỉ này gần các khu vực quan trọng khác như khu công
+          nghệ cao, khu đô thị Thủ Đức và các trung tâm nghiên cứu khoa học, công nghệ.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="video-container">
+      <iframe width="700" height="450" src="https://www.youtube.com/watch?v=A4gWaCokvq0" title="Tham quan HCM"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen autoplay></iframe>
+      <div class="video-description-container">
+        <div class="video-description">
+          Đại học Quốc gia TP.HCM là một trong những hệ thống đại học lớn và uy tín nhất Việt Nam, nổi bật với kiến trúc
+          hiện đại nhưng vẫn giữ được những nét đặc trưng của văn hóa phương Đông.
+
+          Đến tham quan Đại học Quốc gia TP.HCM, du khách sẽ có cơ hội tìm hiểu về cơ sở vật chất hiện đại, các chương
+          trình đào tạo quốc tế và các thành tựu nghiên cứu khoa học qua các hệ thống pano, bảng chỉ dẫn theo tiêu chuẩn
+          quốc tế.
+        </div>
+      </div>
+    </div>
+    <footer class="container-footer">
+      <div class="content-footer">
+        <a href="./home" class="footer-logo">
+          <img src="../images/Nav/Logo-1.png" alt="logo" />
+        </a>
+        <nav class="footer-nav">
+          <h2>Liên kết</h2>
+          <ul>
+            <li><a href="./home">Trang chủ</a></li>
+            <li><a href="./about">Về ĐHQG-HCM</a></li>
+            <li><a href="./admissions">Bản đồ 3D</a></li>
+            <li><a href="./contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav">
+          <h2>Thông tin liên hệ</h2>
+          <ul>
+            <li>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>Điện thoại: 028.37242181</span>
+            </li>
+            <li>
+              <i class="fa fa-fax" aria-hidden="true"></i>
+              <span>Fax: 028.37242182</span>
+            </li>
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Khu phố 6, phường Linh Trung, <br />
+                Thủ Đức, TP.HCM
+              </span>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav">
+          <h2>Theo dõi chúng tôi</h2>
+          <div class="socials">
+            <a href="https://www.facebook.com/vnuhcm" target="_blank">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/vnuhcm" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/vnuhcm" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2024 Bản quyền thuộc về Đại học Quốc gia Thành phố Hồ Chí Minh</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        initClassName: "aos-init",
+        animatedClassName: "aos-animate",
+        useClassNames: false,
+        disableMutationObserver: false,
+        debounceDelay: 50,
+        throttleDelay: 99,
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120,
+        delay: 0,
+        duration: 700,
+        easing: "ease",
+        once: false,
+        mirror: false,
+        anchorPlacement: "top-bottom",
+      });
+      //header
+      var notyf = new Notyf({
+        duration: 2000,
+        position: {
+          x: "right",
+          y: "bottom",
+        },
+        dismissible: true,
+      });
+      const avatar = document.getElementById("avarta");
+      const btnLogIn = document.getElementById("btnLogIn");
+      const logOut = document.getElementById("logOut");
+      logOut.addEventListener("click", function () {
+        localStorage.removeItem("token");
+        notyf.success("Bạn đã đăng xuất thành công!!");
+        setTimeout(() => {
+          window.location = "./home";
+        }, 1000);
+      });
+
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (token) {
+        avatar.style.display = "block";
+        btnLogIn.style.display = "none";
+      } else {
+        avatar.style.display = "none";
+        btnLogIn.style.display = "block";
+      }
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bản đồ 3D</title>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="../styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/footer.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/3dMap.css" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.16/"></script>
+  <script src="../js/3dbuilding.js"></script>
+</head>
+
+<body>
+  <header class="container-header">
+    <div class="header-logo">
+      <img src="../images/Nav/Logo-1.png" alt="logo" />
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li>
+          <a href="./home" class="header-nav-link" onclick="activeNavLinkHeader(this)">Trang chủ</a>
+        </li>
+        <li>
+          <a class="header-nav-link header-active" onclick="activeNavLinkHeader(this)" href="./visit">Về ĐHQG-HCM</a>
+        </li>
+        <li>
+          <a class="header-nav-lin" onclick="activeNavLinkHeader(this)" href="./3dMap">Bản đồ 3D</a>
+        </li>
+        <li>
+          <a class="header-nav-link" onclick="activeNavLinkHeader(this)" href="./contact">Liên hệ</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="avarta" class="avarta">
+      <img src="../images/Nav/Fixed Avatar.jpg" alt="avarta" />
+      <img title="LogOut" id="logOut" src="../images/Nav/Logout Icon.png" alt="logout" />
+    </div>
+
+    <a id="btnLogIn" href="./log-in" class="btn-login">Đăng nhập</a>
+  </header>
+  <div class="map-3d-container">
+    <h1 class="map-3d-title">Bản đồ 3D</h1>
+    <div id="viewDiv"></div>
+
+    <div class="offcanvas offcanvas-end offcanvas-background" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+      data-bs-backdrop="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title d-none d-sm-block" id="offcanvas">
+          Giới thiệu về Đại học Quốc gia TP.HCM
+        </h5>
+        <a href="#"><button class="map-3d-feedback">Góp ý</button></a>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="offcanvas-content">
+          <div class="offcanvas-content-detail">
+            <p>
+              Đại học Quốc gia TP.HCM (ĐHQG-HCM) là hệ thống đại học hàng đầu tại Việt Nam, được thành lập vào năm 1995
+              với mục tiêu xây dựng một trung tâm đào tạo đại học, nghiên cứu khoa học và công nghệ hàng đầu, cung cấp
+              nguồn nhân lực chất lượng cao phục vụ sự nghiệp phát triển kinh tế - xã hội của đất nước.
+            </p>
+            <p>
+              Hiện nay, ĐHQG-HCM bao gồm 6 trường đại học thành viên: Trường Đại học Bách Khoa, Trường Đại học Khoa học
+              Tự nhiên, Trường Đại học KHXH và Nhân văn, Trường Đại học Quốc tế, Trường Đại học Công nghệ Thông tin, và
+              Trường Đại học Kinh tế - Luật. Ngoài ra, ĐHQG-HCM còn có các viện nghiên cứu, trung tâm và đơn vị trực
+              thuộc khác như Viện Môi trường và Tài nguyên, Viện Đào tạo Quốc tế, và Khu Công nghệ Phần mềm.
+            </p>
+            <p>
+              ĐHQG-HCM luôn đi đầu trong việc áp dụng các mô hình giáo dục tiên tiến, bao gồm mô hình giáo dục 4.0 trên
+              nền tảng CDIO, nhằm cải tiến chất lượng đào tạo và đáp ứng nhu cầu xã hội. Với cam kết không ngừng nâng
+              cao chất lượng giáo dục, ĐHQG-HCM đã đạt được nhiều thành tựu nổi bật và được công nhận là một trong những
+              hệ thống giáo dục hàng đầu khu vực.
+            </p>
+            <img src="https://vnuhcm.edu.vn/wp-content/uploads/2020/03/vnuhcm.png" alt="dai-hoc-quoc-gia-tp-hcm"
+              width="500px" />
+          </div>
+          <iconify-icon icon="material-symbols:play-arrow-rounded" type="button" data-bs-dismiss="offcanvas"
+            aria-label="Close" class="toggle-icon-off-detail"></iconify-icon>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end offcanvas-background1" tabindex="-1" id="offcanvas1" data-bs-keyboard="false"
+      data-bs-backdrop="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title d-none d-sm-block" id="offcanvas1">
+          Thông tin về kiến trúc Nhà Điều Hành ĐHQG-HCM
+        </h5>
+        <a href="#"><button class="map-3d-feedback">Góp ý</button></a>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="offcanvas-content">
+          <div class="offcanvas-content-detail">
+            <p>
+              Nhà Điều Hành Đại học Quốc gia TP.HCM (ĐHQG-HCM) là một công trình kiến trúc hiện đại, biểu tượng cho sự
+              phát triển và tầm nhìn chiến lược của hệ thống đại học hàng đầu Việt Nam. Nhà Điều Hành được thiết kế với
+              phong cách kiến trúc hiện đại, hòa quyện với các yếu tố thiên nhiên và không gian xanh.
+            </p>
+            <p>
+              Công trình này không chỉ là nơi làm việc của Ban Giám đốc và các phòng ban chức năng, mà còn là trung tâm
+              tổ chức các sự kiện quan trọng, hội nghị và hội thảo khoa học. Nhà Điều Hành ĐHQG-HCM được xây dựng với
+              các trang thiết bị và cơ sở vật chất tiên tiến, đáp ứng đầy đủ các tiêu chuẩn quốc tế về môi trường làm
+              việc và nghiên cứu.
+            </p>
+            <p>
+              Kiến trúc của Nhà Điều Hành nhấn mạnh vào sự bền vững và thân thiện với môi trường, sử dụng các vật liệu
+              xây dựng tiên tiến và công nghệ tiết kiệm năng lượng. Không gian bên trong được thiết kế mở, tạo cảm giác
+              thoải mái và khuyến khích sự sáng tạo, hợp tác giữa các bộ phận.
+            </p>
+            <img src="https://example.com/image-of-nha-dieu-hanh.jpg" alt="nha-dieu-hanh-dhqg-hcm" width="500px" />
+          </div>
+          <iconify-icon icon="material-symbols:play-arrow-rounded" type="button" data-bs-dismiss="offcanvas"
+            aria-label="Close" class="toggle-icon-off-detail"></iconify-icon>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end offcanvas-background2" tabindex="-1" id="offcanvas2" data-bs-keyboard="false"
+      data-bs-backdrop="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title d-none d-sm-block" id="offcanvas2">
+          Thông tin về Nhà điều hành Đại học Quốc gia
+        </h5>
+        <a href="#"> <button class="map-3d-feedback">Góp ý</button></a>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="offcanvas-content">
+          <div class="offcanvas-content-detail">
+            <p>
+              Nhà điều hành Đại học Quốc gia có tổng diện tích là 120.000 m2 trong đó diện tích mặt bằng là 4.500 m2.
+              Toàn bộ nhà điều hành có 3 tầng lầu chính, 2 gác lửng, 1 sân thượng, 1 tầng trệt, 1 tầng hầm. Tổng cộng 95
+              phòng chức năng.
+            </p>
+            <img
+              src="https://cdn.tgdd.vn/Files/2022/02/21/1416529/du-lich-dinh-doc-lap-chung-nhan-lich-su-tram-nam-sai-gon-202202210948120835.jpg"
+              alt="nha-dieu-hanh-dai-hoc-quoc-gia" width="500px" />
+          </div>
+          <iconify-icon icon="material-symbols:play-arrow-rounded" type="button" data-bs-dismiss="offcanvas"
+            aria-label="Close" class="toggle-icon-off-detail"></iconify-icon>
+        </div>
+      </div>
+    </div>
+    <div class="map-3d-bottom-navigation">
+      <div class="map-3d-block" id="map-3d-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+        <div class="map-3d-block-detail">
+          <h5>Giới thiệu Nhà điều hành Đại học Quốc gia</h5>
+          <p>
+            Nhà điều hành Đại học Quốc gia là một trong những công trình kiến trúc độc đáo và nổi tiếng bậc nhất TP.HCM...
+          </p>
+    
+          <div class="map-3d-block-detail-watch-more">
+            <a href="#">Xem thêm
+              <iconify-icon icon="material-symbols:read-more" class="map-3d-icon-watch-more"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="map-3d-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1" role="button">
+        <div class="map-3d-block-detail">
+          <h5>Xem thông tin về kiến trúc Nhà điều hành Đại học Quốc gia</h5>
+          <p>
+            Nhà điều hành Đại học Quốc gia có kiến trúc đã kết hợp hài hòa giữa nghệ thuật kiến trúc hiện đại và kiến trúc truyền thống Phương Đông...
+          </p>
+          <div class="map-3d-block-detail-watch-more">
+            <a href="#">Xem thêm
+              <iconify-icon icon="material-symbols:read-more" class="map-3d-icon-watch-more"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="map-3d-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2" role="button">
+        <div class="map-3d-block-detail">
+          <h5>Xem thông tin về các tầng của Nhà điều hành Đại học Quốc gia</h5>
+          <ul>
+            <li>
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3" role="button">Tầng 1</a>
+            </li>
+            <li>
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas4" role="button">Tầng 2</a>
+            </li>
+            <li>
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas5" role="button">Tầng 3</a>
+            </li>
+          </ul>
+          <div class="map-3d-block-detail-watch-more">
+            <a href="#">Xem thêm
+              <iconify-icon icon="material-symbols:read-more" class="map-3d-icon-watch-more"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+    </div>
+  </div>
+</body>
+<footer class="container-footer">
+  <div class="content-footer">
+    <a href="./home" class="footer-logo">
+      <img src="../images/Nav/Logo-1.png" alt="logo" />
+    </a>
+    <nav class="footer-nav">
+      <h2>Liên kết</h2>
+      <ul>
+        <li><a href="./home">Trang chủ</a></li>
+        <li><a href="./about">Về ĐHQG-HCM</a></li>
+        <li><a href="./admissions">Bản đồ 3D</a></li>
+        <li><a href="./contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav">
+      <h2>Thông tin liên hệ</h2>
+      <ul>
+        <li>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>Điện thoại: 028.37242181</span>
+        </li>
+        <li>
+          <i class="fa fa-fax" aria-hidden="true"></i>
+          <span>Fax: 028.37242182</span>
+        </li>
+        <li>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>
+            Khu phố 6, phường Linh Trung, <br />
+            Thủ Đức, TP.HCM
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="footer-nav">
+      <h2>Theo dõi chúng tôi</h2>
+      <div class="socials">
+        <a href="https://www.facebook.com/vnuhcm" target="_blank">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/vnuhcm" target="_blank">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/vnuhcm" target="_blank">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="bottom">
+    <p>&copy; 2024 Bản quyền thuộc về Đại học Quốc gia Thành phố Hồ Chí Minh</p>
+  </div>
+</footer>
+
+</html>
+
+<script>
+  const links = document.querySelectorAll(".map-3d-block");
+
+  if (links.length) {
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        links.forEach((link) => {
+          link.classList.remove("map-3d-block-active");
+        });
+        e.preventDefault();
+        link.classList.add("map-3d-block-active");
+      });
+    });
+  }
+</script>
